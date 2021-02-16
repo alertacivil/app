@@ -48,6 +48,7 @@ window.initMap = function() {
 
             sessionStorage.setItem('lat-fin', latitud.value);
             sessionStorage.setItem('lon-fin', longitud.value);
+            
         });
          }
        
