@@ -166,3 +166,4 @@ function obtenerDatos(){
       });
   }
 };
+botonRegistrar.addEventListener('click',obtenerDatos);
