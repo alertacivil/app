@@ -61,6 +61,9 @@ window.initMap = function() {
             
             latitud.value = a.latLng.lat(); 
             longitud.value = a.latLng.lng();
+
+            sessionStorage.setItem('lat-fin', latitud.value);
+            sessionStorage.setItem('lon-fin', longitud.value);
             
         });
          }
