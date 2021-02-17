@@ -130,7 +130,7 @@ function limpiar(){
   inputDescripcion.value ='';
   inputLatitud.value ='';
   inputLongitud.value ='';
-}
+};
 
 function obtenerDatos(){
   let errorv = validar();
@@ -143,7 +143,7 @@ function obtenerDatos(){
           'icon':'warning'
       });
   } else {
-      // cambia_provincia(inputProvincia.value);
+      
       
       let FechaDelito = inputFechaDelito.value;
       let HoraDelito = inputHoraDelito.value;
@@ -166,4 +166,4 @@ function obtenerDatos(){
       });
   }
 };
-botonRegistrar.addEventListener('click',obtenerDatos);
+botonRegistrar.addEventListener('onclick',obtenerDatos);
