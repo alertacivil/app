@@ -92,19 +92,19 @@ function handleNoGeolocation(errorFlag) {
 
 
 /*------------------------------------------------------*/
-const botonRegistrar= document.querySelector('btnRegistrar');
-const inputFechaDelito = document.querySelector('fechaDelito');
-const inputHoraDelito = document.querySelector('horaDelito');
-const inputTipo = document.querySelector('tipo');
-const inputVictima = document.querySelector('victima');
-const inputDescripcion = document.querySelector('sustraido');
-const inputLatitud = document.querySelector('txtlat');
-const inputLongitud = document.querySelector('txtlong');
+const botonRegistrar= document.querySelector('#btnRegistrar');
+const inputFechaDelito = document.querySelector('#fechaDelito');
+const inputHoraDelito = document.querySelector('#horaDelito');
+const inputTipo = document.querySelector('#tipo');
+const inputVictima = document.querySelector('#victima');
+const inputDescripcion = document.querySelector('#sustraido');
+const inputLatitud = document.querySelector('#txtlat');
+const inputLongitud = document.querySelector('#txtlong');
 
 let validar= () =>{
   let error =false; 
   
-  let elementos_requeridos = document.querySelectorAll('frm-registrar [required]');
+  let elementos_requeridos = document.querySelectorAll('#frm-registrar [required]');
      
   
   for (let i = 0; i < elementos_requeridos.length; i++) {
@@ -166,4 +166,4 @@ function obtenerDatos(){
       });
   }
 };
-botonRegistrar.addEventListener('onclick',obtenerDatos);
+botonRegistrar.addEventListener('click',obtenerDatos);
