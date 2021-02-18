@@ -14,11 +14,18 @@ let data =  {
  }
 fetch(uri, {
        method: 'POST',
+       mode: 'no-cors',
        body: JSON.stringify(data),
        headers: {
-           'Accept':'application/json',
            'Content-Type': 'application/json' }                
-      }).then(function(res) {
+      }).then(res => res.json())
+        .catch(error => console.error('Error:', error))
+        .then(response => console.log('Success:', response));
+      
+    }    
+      
+      /* 
+      .then(function(res) {
             if (res.data.resultado == false) {
                 switch (res.data.err.code) {
                     case 11000:
@@ -34,7 +41,5 @@ fetch(uri, {
         .catch(function(err) {
             console.log(err);
         });
-
+ */
  
-    }
-   
