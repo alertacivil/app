@@ -1,23 +1,28 @@
 'use strict';
 
+const uri = 'https://alertacivilapi.azurewebsites.net/api/delito';
 
-let registrar_delito = async(pfechadelito, phoradelito, ptipo, pvictima, pdescripcion, platitud, plongitud) => {
+let registrar_delito = async(pfechadelito,phoradelito,ptipo,pvictima,pdescripcion,platitud,plongitud) => {
 
-    await axios({
-            method: 'post',
-            url: 'https://alertacivilapi.azurewebsites.net/api/delito',
-            responseType: 'json',
-            data: {
-                'FechaDelito': pfechadelito,
-                'HoraDelito': phoradelito,
-                'Tipo':ptipo,
-                'Victima':pvictima,
-                'Descripcion':pdescripcion,
-                'Latitud':platitud,
-                'Longitud':plongitud,
-                         
-            }
-        }).then(function(res) {
+
+fetch(uri, {
+       method: 'POST',
+       data: {
+        'FechaDelito': pfechadelito,
+        'HoraDelito': phoradelito,
+        'Tipo':ptipo,
+        'Victima':pvictima,
+        'Descripcion':pdescripcion,
+        'Latitud':platitud,
+        'Longitud':plongitud,
+                 
+    }, 
+       
+       body: JSON.stringify(data),
+       headers: {
+           'Accept':'application/json',
+           'Content-Type': 'application/json' }                
+      }).then(function(res) {
             if (res.data.resultado == false) {
                 switch (res.data.err.code) {
                     case 11000:
@@ -33,4 +38,16 @@ let registrar_delito = async(pfechadelito, phoradelito, ptipo, pvictima, pdescri
         .catch(function(err) {
             console.log(err);
         });
-};
+
+    }
+
+    // let data =    {
+    //     'FechaDelito': pfechadelito,
+    //     'HoraDelito': phoradelito,
+    //     'Tipo':ptipo,
+    //     'Victima':pvictima,
+    //     'Descripcion':pdescripcion,
+    //     'Latitud':platitud,
+    //     'Longitud':plongitud,
+                 
+    // }
