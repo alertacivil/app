@@ -156,6 +156,20 @@ function obtenerDatos(){
       
       registrar_delito(FechaDelito, HoraDelito, Tipo, Victima, Descripcion, Latitud, Longitud);  
      
+      const uri = 'https://alertacivilapi.azurewebsites.net/api/delito';
+
+
+
+fetch(uri, {
+       method: 'POST',
+       mode: 'no-cors',
+       contentType: 'application/json;charset=utf-8',
+       body: JSON.stringify(registrar_delito)
+      }).then(res => res.json())
+        .catch(error => console.error('Error:', error))
+        .then(response => console.log('Success:', response));
+      
+       
 
       Swal.fire({
           'title': 'Proceso realizado con éxito',
