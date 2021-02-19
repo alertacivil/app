@@ -156,7 +156,7 @@ function obtenerDatos(){
       
       registrar_delito(FechaDelito, HoraDelito, Tipo, Victima, Descripcion, Latitud, Longitud);  
      
-      
+  
 
       Swal.fire({
           'title': 'Proceso realizado con éxito',
