@@ -7,8 +7,7 @@ const uri = 'https://alertacivilapi.azurewebsites.net/api/delito';
 fetch(uri, {
        method: 'POST',
        mode: 'no-cors',
-       headers: {
-           contentType: "application/json;charset=utf-8" },
+       contentType: 'application/json;charset=utf-8',
        body:  {
         'FechaDelito': pfechadelito,
         'HoraDelito': phoradelito,
