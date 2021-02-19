@@ -8,7 +8,7 @@ fetch(uri, {
        method: 'POST',
        mode: 'no-cors',
        headers: {
-           'Content-Type': 'application/json' },
+           contentType: "application/json;charset=utf-8" },
        body:  {
         'FechaDelito': pfechadelito,
         'HoraDelito': phoradelito,
