@@ -3,21 +3,21 @@
 const uri = 'https://alertacivilapi.azurewebsites.net/api/delito';
 
  let registrar_delito = async(pfechadelito,phoradelito,ptipo,pvictima,pdescripcion,platitud,plongitud)=>{
-let data =  {
-     'FechaDelito': pfechadelito,
-     'HoraDelito': phoradelito,
-     'Tipo':ptipo,
-     'Victima':pvictima,
-     'Descripcion':pdescripcion,
-     'Latitud':platitud,
-     'Longitud':plongitud,
- }
+
 fetch(uri, {
        method: 'POST',
        mode: 'no-cors',
-       body: JSON.stringify(data),
        headers: {
-           'Content-Type': 'application/json' }                
+           'Content-Type': 'application/json' },
+       body:  {
+        'FechaDelito': pfechadelito,
+        'HoraDelito': phoradelito,
+        'Tipo':ptipo,
+        'Victima':pvictima,
+        'Descripcion':pdescripcion,
+        'Latitud':platitud,
+        'Longitud':plongitud,
+    }                   
       }).then(res => res.json())
         .catch(error => console.error('Error:', error))
         .then(response => console.log('Success:', response));
