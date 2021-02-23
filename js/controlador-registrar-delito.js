@@ -139,7 +139,7 @@ function obtenerDatos(){
        
       Swal.fire({
           'title':'Sus datos no se pudieron enviar',
-          'text':'Por favor reviselos campos resaltados',
+          'text':'Por favor complete todos los campos',
           'icon':'warning'
       });
   } else {
