@@ -43,7 +43,7 @@ fetch(uri, {
                     switch (res.data.err.code) {
                         case 11000:
                             Swal.fire({
-                                'title': 'El incidente no ha sido registrado',
+                                'title': 'El delito no pudo ser registrado',
                                 //'text' : 'El usuario ya se encuentra registrado',
                                 'icon': 'error'
                             });
@@ -51,8 +51,8 @@ fetch(uri, {
                     }
                 } else {
                     Swal.fire({
-                        'title': 'El incidente ha sido registrado',
-                        'text': 'Bienvenido a S.O.S. Vial C.R.!',
+                        'title': 'El delito ha sido registrado',
+                        'text': 'Gracias por ser parte de Alerta Civil!',
                         'icon': 'success'
                     }).then(() => {
                         limpiar();
