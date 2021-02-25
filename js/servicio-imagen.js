@@ -1,7 +1,7 @@
 'use strict';
 
 const boton_foto = document.querySelector('#btn-foto');
-const imagen = document.querySelector('#user-photo');
+const imagen = document.querySelector('#victima-foto');
 
 let widget_cloudinary = cloudinary.createUploadWidget({
     cloudName : 'civilalert',
