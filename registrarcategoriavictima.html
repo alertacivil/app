@@ -89,11 +89,17 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
     
     <p><label class="w3-text"><b>Descripción</b></label></p> 
     <p><input class="w3-input w3-border" type="text" placeholder="" required name="descripcionVictima" id="descripcionVictima"></p>
-    <div class="w3-card-4">   <img  id="victima-foto"></div>
-  
     
-        <button class="w3-button w3-black" type="button" id="btn-foto">SUBIR ICONO</button>
+    <p><label class="w3-text"><b>Icono</b></label></p> 
+    <div class="w3-card-4">  
+         <img  id="victima-foto">
+    </div>
+  
+    <p>
+    <button class="w3-button w3-black" type="button" id="btn-foto">SUBIR ICONO</button>
     </p>
+       
+   
    
     <p>
       <button class="w3-button w3-black" type="button" id="btnRegistrar">REGISTRAR</button>
@@ -135,9 +141,10 @@ function w3_close() {
 
 </script>
 
-
+<script src="js/controlador-categoria-victima.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
 <script src="js/servicio-imagen.js"></script>
+<script src="js/servicio-categoria-victima.js"></script>
 
 
 

@@ -1,28 +1,5 @@
 'use strict'
 
-
-/* 
- 
-
-fetch(uri, {
-       method: 'POST',
-       mode: 'no-cors',
-       contentType: 'application/json;charset=utf-8',
-       body:  {
-        'FechaDelito': pfechadelito,
-        'HoraDelito': phoradelito,
-        'Tipo':ptipo,
-        'Victima':pvictima,
-        'Descripcion':pdescripcion,
-        'Latitud':platitud,
-        'Longitud':plongitud,
-    }                   
-      }).then(res => res.json())
-        .catch(error => console.error('Error:', error))
-        .then(response => console.log('Success:', response));
-      
-    }    
-       */
     let registrar_delito = async(pfechadelito,phoradelito,ptipo,pvictima,pdescripcion,platitud,plongitud) => {
 
         await axios({
