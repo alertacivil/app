@@ -5,7 +5,7 @@ const imagen = document.querySelector('#victima-foto');
 
 let widget_cloudinary = cloudinary.createUploadWidget({
     cloudName : 'civilalert',
-    uploadPreset : 'civilalert_preset'
+    uploadPreset : 'roywf9rm'
 
 }, (err, result) => {
     if (!err && result && result.event === 'success') {
