@@ -180,8 +180,8 @@ let caracteristicas_datos = async () => {
 
     for (let i = 0; i < tipVictima.length; i++) {
         let opt = document.createElement('option');
-        opt.innerHTML = tipVictima[i]['categoriaVictima'];
-        opt.value = tipVictima[i]['categoriaVictima'];
+        opt.innerHTML = tipVictima[i]['CategoriaVictima'];
+        opt.value = tipVictima[i]['CategoriaVictima'];
         selcaract.appendChild(opt);
 
     }
