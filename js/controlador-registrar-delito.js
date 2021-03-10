@@ -169,4 +169,22 @@ function obtenerDatos(){
       });
   }
 };
+
+/*carga el select con datos de collection tipos de victima*/
+let selcaract = document.getElementById('victima');
+let tipVictima = [];
+
+let caracteristicas_datos = async () => {
+    let tipVictima = await listar_categoria_victima();
+
+
+    for (let i = 0; i < tipVictima.length; i++) {
+        let opt = document.createElement('option');
+        opt.innerHTML = tipVictima[i]['categoriaVictima'];
+        opt.value = tipVictima[i]['categoriaVictima'];
+        selcaract.appendChild(opt);
+
+    }
+};
+caracteristicas_datos();
 botonRegistrar.addEventListener('click',obtenerDatos);
