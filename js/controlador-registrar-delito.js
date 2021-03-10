@@ -172,19 +172,20 @@ function obtenerDatos(){
 
 /*carga el select con datos de collection tipos de victima*/
 let selcaract = document.getElementById('victima');
-let tipVictima = [];
+let tipoVictima = [];
 
 let caracteristicas_datos = async () => {
-    let tipVictima = await listar_categoria_victima();
+    let tipoVictima = await listar_categoria_victima();
 
 
-    for (let i = 0; i < tipVictima.length; i++) {
+    for (let i = 0; i < tipoVictima.length; i++) {
         let opt = document.createElement('option');
-        opt.innerHTML = tipVictima[i]['categoriaVictima'];
-        opt.value = tipVictima[i]['categoriaVictima'];
+        opt.innerHTML = tipoVictima[i]['categoriaVictima'];
+        opt.value = tipoVictima[i]['categoriaVictima'];
         selcaract.appendChild(opt);
 
     }
 };
+
 caracteristicas_datos();
 botonRegistrar.addEventListener('click',obtenerDatos);

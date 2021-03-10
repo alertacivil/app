@@ -46,7 +46,7 @@ let listar_categoria_victima = async() => {
         url: 'https://alertacivilapi.azurewebsites.net/api/victima',
         responseType: 'json',
     }).then((res) => {
-        lista_categoriavictima = res.data.lista_categoriavictima
+        lista_categoriavictima = res.data
     }).catch((err) => {
         console.log('No se pudo establecer la comunicación con el servidor, ocurrió el siguiente error: ', err)
     });
