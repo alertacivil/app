@@ -28,7 +28,7 @@ window.initMap = function() {
         for (let x=0; x < lista_tipovictima.length; x++){
             var punto = lista_puntos[i].victima;
             var cat = lista_tipovictima[x].categoriaVictima;
-            var fig= lista_catincidentes[x].icono;
+            var fig= lista_tipovictima[x].icono;
             var comp = punto.localeCompare(cat);
 
             if (comp == 0) {
