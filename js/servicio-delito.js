@@ -40,4 +40,21 @@
             });
     
     };
+
+    
+let listar_delito = async() => {
+    let lista_delito = [];
+
+    await axios({
+        method: 'get',
+        url: 'https://alertacivilapi.azurewebsites.net/api/delito',
+        responseType: 'json',
+    }).then((res) => {
+        lista_delito = res.data
+    }).catch((err) => {
+        console.log('No se pudo establecer la comunicación con el servidor, ocurrió el siguiente error: ', err)
+    });
+
+    return lista_delito;
+};
  

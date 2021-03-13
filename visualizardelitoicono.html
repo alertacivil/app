@@ -7,14 +7,16 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <script src="https://kit.fontawesome.com/e60033a67d.js" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 <style>
 body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
 
 #map {
   height: 85%;
-      width: 75%;
+      width: 85%;
       margin-top: 5%;
-      margin-left: 15%;
+      margin-left: 5%;
       }
 body, html {
   height: 100%;
@@ -40,8 +42,8 @@ body, html {
       <div class="w3-dropdown-hover">
         <button class="w3-button"><i class="fas fa-binoculars"></i>VISUALIZAR </button>
         <div class="w3-dropdown-content w3-bar-block">
-          <a href="../visualizardelito.html" class="w3-bar-item w3-button">ICONOS</a>
-          <a href="../visualizardelito.html" class="w3-bar-item w3-button">MAPA DE CALOR</a>
+          <a href="../visualizardelitoicono.html" class="w3-bar-item w3-button">ICONOS</a>
+          <a href="../visualizardelitocalor.html" class="w3-bar-item w3-button">MAPA DE CALOR</a>
         </div>
       </div>
       <a href="#pricing" class="w3-bar-item w3-button"><i class="fa fa-usd"></i> PRICING</a>
@@ -63,8 +65,8 @@ body, html {
   <div class="w3-dropdown-hover">
     <button class="w3-button">VISUALIZAR <i class="fa fa-caret-down"></i></button>
     <div class="w3-dropdown-content w3-bar-block">
-      <a href="../visualizardelito.html" class="w3-bar-item w3-button">ICONOS</a>
-      <a href="../visualizardelito.html" class="w3-bar-item w3-button">MAPA DE CALOR</a>
+      <a href="../visualizardelitoicono.html" class="w3-bar-item w3-button">ICONOS</a>
+      <a href="../visualizardelitocalor.html" class="w3-bar-item w3-button">MAPA DE CALOR</a>
     </div>
   </div>
   <!-- <a href="../public/registrardelito.html" onclick="w3_close()" class="w3-bar-item w3-button">PRICING</a> -->
@@ -138,9 +140,11 @@ function w3_close() {
 }
 </script>
 
-<script src="js/controlador-registrar-delito.js"></script> 
-<script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
+<script src="js/servicio-delito.js"></script>
 <script src="js/servicio-categoria-victima.js"></script>
+<script src="js/controlador-visualizar-delito-icono.js"></script> 
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
+
 
 </body>
 </html>
