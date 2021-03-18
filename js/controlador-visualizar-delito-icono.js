@@ -18,14 +18,14 @@ window.initMap = function() {
       center: new google.maps.LatLng(9.933, -84.08),
 
     });
-// //a partir de aqui search box
-    const input = document.getElementById("pac-input");
-    const searchBox = new google.maps.places.SearchBox(input);
-    map.controls[google.maps.ControlPosition.TOP_LEFT].push(input);
+// // //a partir de aqui search box
+//     const input = document.getElementById("pac-input");
+//     const searchBox = new google.maps.places.SearchBox(input);
+//     map.controls[google.maps.ControlPosition.TOP_LEFT].push(input);
 
-    map.addListener("bounds_changed", () => {
-      searchBox.setBounds(map.getBounds());
-    });
+//     map.addListener("bounds_changed", () => {
+//       searchBox.setBounds(map.getBounds());
+//     });
 //     let markers = [];
 //     // Listen for the event fired when the user selects a prediction and retrieve
 //     // more details for that place.
