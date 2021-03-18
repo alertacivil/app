@@ -19,13 +19,6 @@ window.initMap = function() {
 
     });
      let mostrar_mapa = async() => {
-      const input = document.getElementById("pac-input");
-      const autocomplete = new google.maps.places.Autocomplete(input);
-      autocomplete.bindTo("bounds", map);
-      // Specify just the place data fields that you need.
-      autocomplete.setFields(["place_id", "geometry", "name"]);
-      map.controls[google.maps.ControlPosition.TOP_LEFT].push(input);
-
 
       lista_puntos = await listar_delito(); 
       lista_tipovictima = await listar_categoria_victima();
