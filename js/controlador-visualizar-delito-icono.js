@@ -117,60 +117,6 @@ window.initMap = function() {
 document.body.appendChild(script);
 
 
-// let lista_incidente=[];
-
-// let mostrar_datos = async() => {
-//     lista_incidente = await listar_incidente();
-//     tbody.innerHTML = '';
-  
-//     for (let i = 0; i < lista_incidente.length; i++) {
-//         let fila = tbody.insertRow();
-      
-//        let celda_incidente = fila.insertCell().innerHTML = lista_incidente[i]['incidente'];
-//        let celda_tipo_incidente = fila.insertCell().innerHTML = lista_incidente[i]['tipo_incidente'];
-//        let celda_ruta = fila.insertCell().innerHTML = lista_incidente[i]['ruta'];
-//        let celda_ubicacion_incidente =  fila.insertCell().innerHTML = lista_incidente[i]['ubicacion_incidente'];
-   
-      
-//     }
-
-   
-// };
-
-
-// let filtrar_datos = () => {
-
-//     tbody.innerHTML = '';
-//     let filtro = input_filtro.value.toLowerCase();
-//     let hay_coincidencias = false;
-
-//     for (let i = 0; i < lista_incidente.length; i++) {
-//         let incidente = lista_incidente[i]['ruta'].toLowerCase();
-        
-
-//         if (incidente.includes(filtro)) {
-//             let fila = tbody.insertRow();
-
-//             let celda_descripcion = fila.insertCell().innerHTML = lista_incidente[i]['incidente'];
-//        let celda_incidente = fila.insertCell().innerHTML = lista_incidente[i]['tipo_incidente'];
-//        let celda_ruta = fila.insertCell().innerHTML = lista_incidente[i]['ruta'];
-//        let celda_direccion =  fila.insertCell().innerHTML = lista_incidente[i]['ubicacion_incidente'];
-
-      
-//             hay_coincidencias = true;
-//         } else {
-
-//         }
-
-//     }
-//     if (hay_coincidencias == false) {
-//         tbody.innerHTML = 'No hay datos que mostrar';
-//     }
-// };
-// mostrar_datos();
-//input_filtro.addEventListener('keyup', filtrar_datos);
-/*carga el select con datos de collection tipos de victima*/
-
 /*-----------------------------------------*/
 const botonFiltrar= document.querySelector('#btnFiltrar');
 const inputVictima = document.querySelector('#victima');
