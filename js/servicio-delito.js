@@ -58,3 +58,19 @@ let listar_delito = async() => {
     return lista_delito;
 };
  
+let filtrar_listar_delito = async(Victima) => {
+    let filtra_lista_delito = [];
+
+    await axios({
+        method: 'get',
+        params: {victima: Victima},
+        url: 'https://alertacivilapi.azurewebsites.net/api/delito',
+        responseType: 'json'
+    }).then((res) => {
+        filtra_lista_delito = res.data
+    }).catch((err) => {
+        console.log('No se pudo establecer la comunicación con el servidor, ocurrió el siguiente error: ', err)
+    });
+
+    return filtra_lista_delito;
+};
