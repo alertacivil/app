@@ -17,10 +17,10 @@ window.initMap = function() {
     mapTypeId: "satellite",
   });
   heatmap = new google.maps.visualization.HeatmapLayer({
-    data: LatLng,
+    data: getPoints(),
     map: map,
   });
-  getPoints();
+  
 }
 
 function toggleHeatmap() {
@@ -56,7 +56,7 @@ function changeOpacity() {
 }
 let lista_puntos = [];
 
-let getPoints = async() =>{
+function getPoints() {
              let latLng = [];
             lista_puntos = await listar_delito(); 
            
