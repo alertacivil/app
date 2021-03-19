@@ -7,11 +7,12 @@ script.defer = true;
 script.async = true;
 
 
-let map, heatmap;
+var map; 
+let heatmap;
 
-function initMap() {
-  map = new google.maps.Map(document.getElementById("map"), {
-    zoom: 15,
+window.initMap = function() {
+  map = new google.maps.Map(document.getElementById('map'),{
+    zoom:15,  
     center: new google.maps.LatLng(9.933, -84.08),
     mapTypeId: "satellite",
   });
