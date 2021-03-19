@@ -9,19 +9,34 @@ script.async = true;
 
 var map; 
 let heatmap;
-
+let lista_puntos = [];
 window.initMap = function() {
   map = new google.maps.Map(document.getElementById('map'),{
     zoom:15,  
     center: new google.maps.LatLng(9.933, -84.08),
     mapTypeId: "satellite",
   });
-  heatmap = new google.maps.visualization.HeatmapLayer({
-    data: getPoints(),
-    map: map,
-  });
+
+  let  getPoints =async() => {
+             
+    lista_puntos = await listar_delito(); 
+   
+    
+    for ( let i = 0; i < lista_puntos.length; i++){
+            
+            var latLng = new google.maps.LatLng(lista_puntos[i].latitud, lista_puntos[i].longitud);
+    
+            heatmap = new google.maps.visualization.HeatmapLayer({
+              data: latLng,
+              map: map,
+            });
+    
+          }
+    
+  };
+ getPoints(); 
   
-}
+};
 
 function toggleHeatmap() {
   heatmap.setMap(heatmap.getMap() ? null : map);
@@ -54,17 +69,6 @@ function changeRadius() {
 function changeOpacity() {
   heatmap.set("opacity", heatmap.get("opacity") ? null : 0.2);
 }
-let lista_puntos = [];
 
-let  getPoints =async() => {
-             let latLng = [];
-            lista_puntos = await listar_delito(); 
-           
-            
-            for ( let i = 0; i < lista_puntos.length; i++){
-                    
-                     latLng = new google.maps.LatLng(lista_puntos[i].latitud, lista_puntos[i].longitud);
-            }
-            return latLng;
-          }
+
           document.body.appendChild(script);
