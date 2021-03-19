@@ -10,6 +10,7 @@ script.async = true;
 var map; 
 let heatmap;
 let lista_puntos = [];
+let puntos = [];
 window.initMap = function() {
   map = new google.maps.Map(document.getElementById('map'),{
     zoom:15,  
@@ -24,10 +25,10 @@ window.initMap = function() {
     
     for ( let i = 0; i < lista_puntos.length; i++){
             
-            var latLng = new google.maps.LatLng(lista_puntos[i].latitud, lista_puntos[i].longitud);
+             puntos[i] = new google.maps.LatLng(lista_puntos[i].latitud, lista_puntos[i].longitud);
     
             heatmap = new google.maps.visualization.HeatmapLayer({
-              data: latLng,
+              data: puntos,
               map: map,
             });
     
