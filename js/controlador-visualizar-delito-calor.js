@@ -56,7 +56,7 @@ function changeOpacity() {
 }
 let lista_puntos = [];
 
-function getPoints() {
+let  getPoints =async() => {
              let latLng = [];
             lista_puntos = await listar_delito(); 
            
