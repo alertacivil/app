@@ -2,7 +2,7 @@
 
 // Apertura de google maps y captura de los datos
 var script = document.createElement('script');
-script.src = 'https://maps.googleapis.com/maps/api/js?key=AIzaSyDvn8DPVSYpql3UrIS5_cDfTKQonoHff38&callback=initMap&zoom=15&format=png&maptype=roadmap&libraries=visualization';
+script.src = 'https://maps.googleapis.com/maps/api/js?key=AIzaSyDvn8DPVSYpql3UrIS5_cDfTKQonoHff38&callback=initMap&libraries=visualization&v=weekly"';
 script.defer = true;
 script.async = true;
 
@@ -11,7 +11,7 @@ let map, heatmap;
 
 function initMap() {
   map = new google.maps.Map(document.getElementById("map"), {
-    zoom: 13,
+    zoom: 15,
     center: new google.maps.LatLng(9.933, -84.08),
     mapTypeId: "satellite",
   });
