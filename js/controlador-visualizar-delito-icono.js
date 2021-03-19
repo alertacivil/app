@@ -3,7 +3,7 @@
 // Apertura de google maps y captura de los datos
 var script = document.createElement('script');
 script.src = 'https://maps.googleapis.com/maps/api/js?key=AIzaSyDvn8DPVSYpql3UrIS5_cDfTKQonoHff38&callback=initMap&zoom=15&format=png&maptype=roadmap&libraries=&v=weekly';
-sscript.defer = true;
+script.defer = true;
 script.async = true;
 
 
