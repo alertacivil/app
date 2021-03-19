@@ -17,9 +17,10 @@ window.initMap = function() {
     mapTypeId: "satellite",
   });
   heatmap = new google.maps.visualization.HeatmapLayer({
-    data: getPoints(),
+    data: LatLng,
     map: map,
   });
+  getPoints();
 }
 
 function toggleHeatmap() {
@@ -66,3 +67,4 @@ let getPoints = async() =>{
             }
             return latLng;
           }
+          document.body.appendChild(script);
