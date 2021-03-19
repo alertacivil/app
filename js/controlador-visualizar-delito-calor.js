@@ -53,14 +53,15 @@ function changeOpacity() {
   heatmap.set("opacity", heatmap.get("opacity") ? null : 0.2);
 }
 let lista_puntos = [];
+
 let getPoints = async() =>{
-  
+             let latLng = [];
             lista_puntos = await listar_delito(); 
            
             
             for ( let i = 0; i < lista_puntos.length; i++){
                     
-                    var latLng = new google.maps.LatLng(lista_puntos[i].latitud, lista_puntos[i].longitud);
+                     latLng = new google.maps.LatLng(lista_puntos[i].latitud, lista_puntos[i].longitud);
             }
             return latLng;
           }
