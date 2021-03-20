@@ -109,7 +109,7 @@ function obtenerDatos(){
       
       filtrar_listar_delito(Victima);  
      
-  
+    
 
       Swal.fire({
           'title': 'Proceso realizado con éxito',
@@ -118,6 +118,51 @@ function obtenerDatos(){
       }).then(() => {
           limpiar();
       });
+
+      window.initMap = function() {
+        map = new google.maps.Map(document.getElementById('map'),{
+          zoom:15,  
+          center: new google.maps.LatLng(9.933, -84.08),
+    
+        });
+         let mostrar_mapa_filtrado = async() => {
+    
+          lista_puntos = await filtrar_listar_delito(); 
+          lista_tipovictima = await listar_categoria_victima();
+          
+          for ( let i = 0; i < lista_puntos.length; i++){
+            for (let x=0; x < lista_tipovictima.length; x++){
+                var punto = lista_puntos[i].victima;
+                var cat = lista_tipovictima[x].categoriaVictima;
+                var fig= lista_tipovictima[x].icono;
+                var comp = punto.localeCompare(cat);
+    
+                if (comp == 0) {
+                  
+                  var latLng = new google.maps.LatLng(lista_puntos[i].latitud, lista_puntos[i].longitud);
+                  var marker = new google.maps.Marker({
+                  position: latLng,
+                  map: map,
+                  icon: fig,
+                });
+    
+                } else if (punto === '') {
+                  var latLng = new google.maps.LatLng(lista_puntos[i].latitud, lista_puntos[i].longitud);
+                  var marker = new google.maps.Marker({
+                  position: latLng,
+                  map: map,
+                  icon: '../images/thief1.png'
+                });  
+                }
+        
+            }
+          } 
+        };
+      
+    
+      mostrar_mapa_filtrado();
+    
+    };
   }
 };
 
@@ -143,3 +188,4 @@ let caracteristicas_datos = async () => {
 };
 
 caracteristicas_datos();
+botonFiltrar.addEventListener('click',obtenerDatos);
