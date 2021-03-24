@@ -11,6 +11,7 @@ script.async = true;
 var map; 
 let lista_puntos = [];
 let lista_tipovictima = [];
+let lista_detalles = [];
 
 window.initMap = function() {
     map = new google.maps.Map(document.getElementById('map'),{
@@ -22,7 +23,7 @@ window.initMap = function() {
 
       lista_puntos = await listar_delito(); 
       lista_tipovictima = await listar_categoria_victima();
-      lista_detalles=[];
+    
       for ( let i = 0; i < lista_puntos.length; i++){
         for (let x=0; x < lista_tipovictima.length; x++){
             var punto = lista_puntos[i].victima;
