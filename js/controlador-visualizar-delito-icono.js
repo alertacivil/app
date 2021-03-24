@@ -32,6 +32,9 @@ window.initMap = function() {
             var comp = punto.localeCompare(cat);
             var detalles = (lista_puntos[i].tipo, lista_puntos[i].fechaDelito, lista_puntos[i].horaDelito)
             
+            const infowindow = new google.maps.InfoWindow({
+              content: detalles
+            })
             if (comp == 0) {
               
               var latLng = new google.maps.LatLng(lista_puntos[i].latitud, lista_puntos[i].longitud);
@@ -40,9 +43,10 @@ window.initMap = function() {
               map: map,
               icon: fig,
               title: punto,
-              content: detalles
+            
             });
-
+          
+             
             } else if (punto === '') {
               var latLng = new google.maps.LatLng(lista_puntos[i].latitud, lista_puntos[i].longitud);
               var marker = new google.maps.Marker({
@@ -50,17 +54,18 @@ window.initMap = function() {
               map: map,
               icon: '../images/thief1.png',
               title: punto,
-              content: detalles
+              
             });  
             }
+            marker.addListener( "click", () => {
+              infowindow.open(map, marker);
+            });
     
         }
       } 
  
 
-      marker.addListener(marker, "click", () => {
-        infowindow.open(map, marker);
-      });
+      
     };
     
    
