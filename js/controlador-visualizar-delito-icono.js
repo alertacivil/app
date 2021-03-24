@@ -30,7 +30,7 @@ window.initMap = function() {
             var cat = lista_tipovictima[x].categoriaVictima;
             var fig= lista_tipovictima[x].icono;
             var comp = punto.localeCompare(cat);
-            lista_detalles= (lista_puntos[i].FechaDelito, lista_puntos[i].HoraDelito,lista_puntos[i].Tipo, lista_puntos[i].Victima);
+            lista_detalles[i]= (lista_puntos[i].FechaDelito, lista_puntos[i].HoraDelito,lista_puntos[i].Tipo, lista_puntos[i].Victima);
             if (comp == 0) {
               
               var latLng = new google.maps.LatLng(lista_puntos[i].latitud, lista_puntos[i].longitud);
