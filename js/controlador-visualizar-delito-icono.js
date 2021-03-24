@@ -70,10 +70,7 @@ window.initMap = function() {
       
     };
     
-  
-    marker.addListener( "click", () => {
-      infowindow.open(map, marker);
-    });
+
 
   mostrar_mapa();
 
