@@ -35,6 +35,7 @@ window.initMap = function() {
             const infowindow = new google.maps.InfoWindow({
               content: detalles
             })
+
             if (comp == 0) {
               
               var latLng = new google.maps.LatLng(lista_puntos[i].latitud, lista_puntos[i].longitud);
@@ -45,7 +46,7 @@ window.initMap = function() {
               title: punto,
             
             });
-          
+
              
             } else if (punto === '') {
               var latLng = new google.maps.LatLng(lista_puntos[i].latitud, lista_puntos[i].longitud);
@@ -56,11 +57,12 @@ window.initMap = function() {
               title: punto,
               
             });  
+            
             }
-            marker.addListener( "click", () => {
+          
+            google.maps.addListener( marker,"click", () => {
               infowindow.open(map, marker);
             });
-    
         }
       } 
  
@@ -68,8 +70,10 @@ window.initMap = function() {
       
     };
     
-   
-   
+  
+    marker.addListener( "click", () => {
+      infowindow.open(map, marker);
+    });
 
   mostrar_mapa();
 
