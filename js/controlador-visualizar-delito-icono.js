@@ -58,7 +58,7 @@ window.initMap = function() {
       } 
  
 
-      google.maps.event.addListener(marker, "click", () => {
+      marker.addListener(marker, "click", () => {
         infowindow.open(map, marker);
       });
     };
