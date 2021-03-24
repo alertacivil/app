@@ -58,9 +58,13 @@ window.initMap = function() {
       } 
  
     };
+    
     google.maps.event.addListener(marker, "click", () => {
       infowindow.open(map, marker);
     });
+   
+
+   
 
   mostrar_mapa();
 
