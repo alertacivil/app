@@ -30,11 +30,8 @@ window.initMap = function() {
             var cat = lista_tipovictima[x].categoriaVictima;
             var fig= lista_tipovictima[x].icono;
             var comp = punto.localeCompare(cat);
-            var detalles = (lista_puntos[i].tipo, lista_puntos[i].fechaDelito, lista_puntos[i].horaDelito)
             
-            const infowindow = new google.maps.InfoWindow({
-              content: detalles
-            })
+          
 
             if (comp == 0) {
               
@@ -60,9 +57,7 @@ window.initMap = function() {
             
             }
           
-            google.maps.addListener( marker,"click", () => {
-              infowindow.open(map, marker);
-            });
+           
         }
       } 
  
